@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	input[type=text],input[type=password],{
+	  
+	  
+	  display: inline-block;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing: border-box;
+	}
+
+	input[type=submit] {
+	  background-color: #4CAF50;
+	  color: white;
+	  padding: 12px 20px;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	  float: right;
+	}
+
+	input[type=submit]:hover {
+	  background-color: #45a049;
+	}
+	div{
+		text-align:center;
+		padding:0px 200px;
+		
+		}
+	form{
+		padding:20px;
+		border:1px solid green;
+		display:inline-block;
+		background:#CFF793;
+		}
+		a{
+		text-decoration:none;
+		}
+	#Register{
+	display:none;
+	}
+	body{
+		background-image:url("getty.jpg");
+		}
+</style>
+<script>
+	function Register(){
+		document.getElementById("Login").style.display="none";
+		document.getElementById("Register").style.display="block";
+	}
+	function compare(){
+		var m=document.getElementById("password");
+		var n=document.getElementById("cpassword");
+		if(m!=n)
+		{
+		alert("password miss matching");
+		}
+	}
+	
+	function happy(){
+	var k=document.getElementById("usern").value;
+	var l=document.getElementById("password1").value;
+	
+	if((k!="admin") && (l!="admin")){
+	alert("enter valid name");
+		}
+		else{
+		alert("successful");
+		}
+		}
+	</script>
+</head>
+<body>
+<div class="container" id="Login">
+	<form action="#">
+		<h1>Login</h1>
+		<label>User Name :</label><input type="text" name="name" required id="usern"><br><br>
+		<label>Password :</label><input type="password" name="password" required id="password1"><br><br>
+		<input type="submit" value="Login" onclick="happy()"><br>
+		<p>To Register <a href="#" onclick="Register()">Click Here</a></p>
+	</form>
+	</div>
+<div id="Register">
+	<form action="#" id="Login">
+		<h1>Register</h1>
+		<label>User Name :</label><input type="text" required><br><br>
+		<label>Mail Id :</label><input type="email" required><br><br>
+		<label>Password :</label><input type="password" name="password" required id="password"><br><br>
+		<label>Confirm Password :</label><input type="password" name="password" required id="cpassword"><br><br>
+		<input type="submit" value="Register" onclick="compare()"><br>
+	</form>
+	</div>
+</body>

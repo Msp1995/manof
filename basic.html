@@ -1,0 +1,234 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+   
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  
+    <style> 
+          
+        /* styling navlist */ 
+        #navlist { 
+            background-color: #0074D9; 
+            position: absolute; 
+            width: 100%;
+			
+        } 
+          
+        /* styling navlist anchor element */ 
+        #navlist a { 
+            float:left; 
+            display: block; 
+            color: #f2f2f2; 
+            text-align: center; 
+            padding: 12px; 
+            text-decoration: none; 
+            font-size: 15px; 
+        } 
+        .navlist-right{ 
+            float:right; 
+        } 
+  
+        /* hover effect of navlist anchor element */ 
+        #navlist a:hover { 
+            background-color: #ddd; 
+            color: black; 
+        } 
+          
+        /* styling search bar */ 
+        .search input[type=text]{ 
+            width:300px; 
+            height:25px; 
+            border-radius:25px; 
+            border: none; 
+  
+        } 
+          
+        .search{ 
+            float:right; 
+            margin:7px; 
+  
+        } 
+          
+        .search button{ 
+            background-color: #0074D9; 
+            color: #f2f2f2; 
+            float: right; 
+            padding: 5px 10px; 
+            margin-right: 16px; 
+            font-size: 12px; 
+            border: none; 
+            cursor: pointer; 
+        } 
+		.menu{
+			background:blue;
+			border:1px solid blue;
+			width: 100%;
+			position: relative; 
+			}	
+		.menu a{
+				color:white;
+				}	
+		#login{
+				float:right;
+				margin-right:40px;
+				display:block;
+				text-decoration:none;
+				font-size: 14px;
+				}
+		#ContactUs{
+			display:none;
+			border:1px solid red;
+			border-radius:20px;
+			text-align:center;
+			margin:20px 200px auto;
+			background-image:url("images1.jpeg");
+			font-size:20px;
+			color:white;
+
+		}
+		#AboutUs{
+			display:none;
+			
+			border-radius:20px;
+			text-align:center;
+			margin:20px 200px auto;
+			font-size:20px;
+			color:white;
+		}
+		#OurProducts{
+			display:none;
+		}
+		#Services{
+			display:none;
+		}
+		.menu{
+	 
+	  background-color: red;
+	  animation-name: example;
+	  animation-duration: 10s;
+			}
+ 
+ @keyframes example {
+
+		  0%  {background-color: red;}
+		  25%  {background-color: yellow;}
+		  50%  {background-color: blue;}
+		  100% {background-color: green;}
+		}
+		body{
+		background-image:url("getty.jpg");
+		}
+    </style> 
+<script>
+	function home(){
+		document.getElementById("Home").style.display="block";
+		document.getElementById("ContactUs").style.display="none";
+		document.getElementById("AboutUs").style.display="none";
+		document.getElementById("OurProducts").style.display="none";
+		document.getElementById("Services").style.display="none";
+	}
+	function aboutus(){
+		document.getElementById("AboutUs").style.display="block";
+		document.getElementById("ContactUs").style.display="none";
+		document.getElementById("Home").style.display="none";
+		document.getElementById("OurProducts").style.display="none";
+		document.getElementById("Services").style.display="none";
+	}
+	function contactus(){
+		document.getElementById("ContactUs").style.display="block";
+		document.getElementById("Home").style.display="none";
+		document.getElementById("AboutUs").style.display="none";
+		document.getElementById("OurProducts").style.display="none";
+		document.getElementById("Services").style.display="none";
+	}
+	function OurProducts(){
+		document.getElementById("ContactUs").style.display="none";
+		document.getElementById("Home").style.display="none";
+		document.getElementById("AboutUs").style.display="none";
+		document.getElementById("OurProducts").style.display="block";
+		document.getElementById("Services").style.display="none";
+	}
+	function Services(){
+		document.getElementById("ContactUs").style.display="none";
+		document.getElementById("Home").style.display="none";
+		document.getElementById("AboutUs").style.display="none";
+		document.getElementById("OurProducts").style.display="none";
+		document.getElementById("Services").style.display="block";
+	}
+	
+</script>
+</head> 
+  
+<body> 
+     <div class="menu">
+		<a href="#" style="text-decoration:none">Toll Free</a>
+		<a id="login" href="login.html">Login</a>
+	 </div>
+    <!-- Navbar items -->
+    <div id="navlist"> 
+        <a href="#" onclick="home()">Home</a> 
+        <a href="#" onclick="OurProducts()">Our Products</a> 
+        <a href="#" onclick="Services()">Services</a> 
+        <a href="#" onclick="aboutus()">About Us</a> 
+        <a href="#" onclick="contactus()">Contact Us</a> 
+          
+        <!-- seach bar right align -->
+        <div class="search"> 
+              
+            <form action="#"> 
+                <input type="text" placeholder=" Search..." name="search"> 
+                <button> 
+                    <i class="fa fa-search"
+                        style="font-size: 18px;"> 
+                    </i> 
+                </button> 
+            </form> 
+        </div> 
+    </div>
+	<div class="content" style="padding-top:40px;">
+		<div id="Home">
+		<h1 style="color:green;padding-left:20px;">Home</h1>
+			<p style="text-indent:10px;text-align:justify;color:yellow;padding:20px;border:1px solid yellow;">GnuCash is personal and small-business financial-accounting software, freely licensed under the GNU GPL and available 
+			for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.Designed to be easy to use, yet powerful and flexible, 
+			GnuCash allows you to track bank accounts, stocks, income and expenses. As quick and intuitive to use as a checkbook register, 
+			it is based on professional accounting principles to ensure balanced books and accurate reports.</p>
+		</div>
+		<div id="OurProducts">
+			<h1 style="color:green;padding-left:20px;">Our Products</h1>
+			<ul style="text-indent:10px;text-align:justify;color:yellow;padding:0px 80px;border:1px solid yellow;"><li>POS Billing Software</li>
+				<li>Billing Software for Retail Shop</li>
+				<li>Inventory Management Software</li>
+				<li>Church Accounting Software</li>
+				<li>Free Online GST Software Restaurant Billing Software</li>
+				<li>Billing Software for Medical Shop</li>
+				<li>Accounting App for Android</li></ul>
+		</div>
+		</div>
+		<div id="Services" >
+			<h1 style="color:green;padding-left:20px;">Services</h1>
+			<ul style="text-indent:10px;text-align:justify;color:yellow;padding:0px 80px;border:1px solid yellow;"><li>POS Billing Software</li>
+				<li>Billing Software for Retail Shop</li>
+				<li>Inventory Management Software</li>
+				<li>Church Accounting Software</li>
+				<li>Free Online GST Software Restaurant Billing Software</li>
+				<li>Billing Software for Medical Shop</li>
+				<li>Accounting App for Android</li></ul>
+		</div>
+		<div id="AboutUs">
+			<h1 style="color:green;padding-left:20px;">About Us</h1>
+			<p>We help you to keep yours account upto date</p>
+		</div>
+		<div id="ContactUs">
+			<h1 style="color:green;padding-left:20px;">Contact Us</h1>
+			<p>@mail:finance@yahoo.com</p>
+			<p>Phone : 00000000000</p>
+			<p>Adress: finance pvt. ltd <br>
+				gandhi nagar , hubli</p>
+		</div>
+	</div>
+</body>
+</html>
